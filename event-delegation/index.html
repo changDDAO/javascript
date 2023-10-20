@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+    <style>
+        body * {
+            margin: 10px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+   <div id="buttons_id">
+    <button class="button-class">click me</button>
+    <button class="button-class">click me</button>
+   </div> 
+   <script>
+    const buttons = document.getElementsByClassName('button-class');
+    
+        const button_list = document.querySelector('#buttons_id');
+        buttons_id.addEventListener('click',()=>alert('clicked'));
+        const button = document.createElement('button');
+        button.setAttribute('class', 'button-class');
+        button.textContent = 'click me';
+        button_list.appendChild(button);
+
+
+   </script>
+</body>
+</html>
