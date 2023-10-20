@@ -16,17 +16,31 @@ but2.addEventListener('click', (event)=>{
 console.log(val); 
 });
   */
- const sub_button = document.querySelector('.submit-btn');
+ /* const sub_button = document.querySelector('.submit-btn');
  const title = document.querySelector('h2');
  const form = document.querySelector('form');
 
  sub_button.addEventListener('click', handleEvent);
  function handleEvent(e){
+  if( )
    e.preventDefault();
    console.log(e.type);
    title.textContent = `Mouse X : ${e.offsetX}, Mouse Y : ${e.offsetY}`;
 
  }
-  
+  */
+const form = document.querySelector('form');
+const emailInput = document.getElementById('email');
+const title = document.querySelector('h2');
+
+form.addEventListener('submit', handleEvent);
+emailInput.addEventListener('keydown', handleEvent);
+
+function handleEvent(e) {
+  if(e.type === 'submit')
+  e.preventDefault();
+console.log(e.type);
+title.innerText = e.target.value;
+} 
 
 
